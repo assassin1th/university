@@ -7,6 +7,7 @@
 \usepackage[english,russian]{babel}
 \usepackage[T2A]{fontenc}
 \usepackage[utf8]{inputenc}
+\setcounter{MaxMatrixCols}{20}
 \begin{document}
 	$A$ -- прямоугольная матринца размером $m \times n$
 	$$
@@ -52,7 +53,7 @@
 	Взвешенный граф схемы
 
 	% Тут должен быть граф
-	\includegraphics{lection5.1.pdf}
+	%\includegraphics{lection5.1.pdf}
 	
 	$R$ -- матрица взвешенного графа
 	$$
@@ -418,7 +419,7 @@
 	МСВД --- минимальная суммарная взвешенная длина соединений
 
 	Алгоритмы размещения элементов:
-	\begin{imtemize}
+	\begin{itemize}
 		\item Непрерывнодискретные
 		\begin{itemize}
 			\item Градиентные алгоритмы
@@ -433,7 +434,7 @@
 			\item Матричные схемы
 			\item Итерационные алгоритмы
 		\end{itemize}
-	\end{imtemize}
+	\end{itemize}
 
 	Пусть электрическая схема описывается матрицей R, размером $n \times n$ и существует коммутационное поле с фиксированным размером $m \times n$. Если $m > n$ то вводим $m - n$ фиктивных эелементов не имеющих связей с остальными элементами связей. Коммутационное поле описывается Матрице D, которая представляет собой матрицу расстояний мужду i j позициями
 	$$
@@ -458,7 +459,7 @@
 	$$
 
 	$$
-	МСВД = \frac{1}{2} \sum\limits_{i = 1}_{j \ne s}^{n}\sum\limits_{i = 1}_{j \ne s}^{n} r_{ij} d_{p(i) p (j)} + \sum\limits_{j=1}^{n} r_{is} d_{p(i) p(s)}
+	МСВД = \frac{1}{2} \sum\limits_{i = 1 j \ne s}^{n}\sum\limits_{i = 1 j \ne s}^{n} r_{ij} d_{p(i) p (j)} + \sum\limits_{j=1}^{n} r_{is} d_{p(i) p(s)}
 	$$
 	$p(i)$ -- Позиция $i$-го элемента. $s$ -- инедкс жеско закреплённого элемента
 
