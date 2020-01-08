@@ -1,0 +1,59 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{mathtext}
+\usepackage[english,russian]{babel}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\begin{document}
+\section{Расчет на точность. Вероятностный метод.}
+
+Допуск на кинематическую погрешность колеса находят как сумму допусков на накопительную
+погрешность шага $F_p$ и допуска на погрешность профиля зуба $f_f$:
+$$
+F_i^{'} = F_p^{'} + f_{f_i}
+$$
+Допуск на угловую кинематическую погрешность в угловых минутах находят так:
+$$
+\Delta \varphi_{max, i} = \frac{6.88 \cdot K F_i^{'}}{m z_i} 
+$$
+Где $K$ - коэффициент фазовой компенсации.
+
+Теперь считаем минимальный допуск на угловую кинематическую погрешность.
+
+\begin{tabular}{cc}
+$ \Delta \varphi_{min,i} = \frac{4.88 \cdot K_s F_i^{'}}{m z_i} $ & для 7,8 класса точности \\
+$ \Delta \varphi_{min,i} = \frac{4,3 \cdot K_s F_i^{'}}{m z_i} $  & для 5, 6, 9, 10 классов точности
+\end{tabular}
+
+Найдем поле рассеивания:
+$$
+V_i = \varphi_{max, i} - \varphi_{min, i}
+$$
+
+Координаты середины поля рассеивания: $E_i = \frac{ \Delta \varphi_{max, i} + \Delta \varphi_{min, i}}{2} $
+Суммарная вероятностная кинематическая погрешность:
+$$
+\Delta \varphi_{i, \Sigma}^{B} = \sum\limits_{j = 1}^{N} \frac{E_{i,j}}{i_j - N} + t_1 \sqrt[2]{\sum\limits_{j = 1}^{N} \left(\frac{V_{i,j}}{i_j - N}\right)^2}
+$$
+$t_1$ -- коэф-т Стьюдента
+
+\underline{Опр-е погрешностей, вносимых мертвым ходом} 
+
+$$
+V_{л, i} = \Delta \varphi_{л, max_j} - \Delta \varphi_{л, min_j}
+$$
+$$
+\Delta \varphi_{л min_j} = \frac{7.33 \cdot j_{n, min}}{m z_j} 
+$$
+$$
+\Delta \varphi_{л max_j} = \frac{7.33 \cdot j_{n, max}}{m z_j} 
+$$
+$$
+E_{л_j} = \frac{ \Delta \varphi_{j \: л \: max} + \Delta \varphi_{j \: л \: min}}{2}
+$$
+$$
+\Delta \varphi_{л}^{Вер} = \sum\limits_{j = 1}^{N} \frac{E_{л \: j}}{i_{j - N}} + t_2 \sqrt[2]{\sum\limits_{j = 1}^{N} \left(\frac{V_{i \: j}}{i_{j - N}} \right)^2}
+$$
+
+\end{document}
+
